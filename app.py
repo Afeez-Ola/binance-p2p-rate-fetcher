@@ -5,13 +5,14 @@ from selenium.webdriver.common.by import By
 from twilio.rest import Client
 from dotenv import load_dotenv
 
-
 load_dotenv()
 
 chrome_driver_path = r"C:\Users\user\OneDrive\Desktop\chromedriver.exe"
 option = webdriver.ChromeOptions()
 option.add_experimental_option("detach", True)
 driver = webdriver.Chrome(options=option)
+
+
 def getP2PRate():
     driver.get('https://p2p.binance.com/en/trade/sell/USDT?fiat=NGN&payment=BANK')
 
